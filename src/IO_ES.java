@@ -16,7 +16,7 @@ import java.util.*;
 public class IO_ES {
     
     
-    static public int leerInteger(){
+    static public int leerInteger()throws InputMismatchException{
         
         Scanner teclado = new Scanner(System.in);
         
@@ -27,9 +27,7 @@ public class IO_ES {
         
     }
     
-    
-    
-    static public float leerReal(){
+    static public float leerReal()throws InputMismatchException{
         
         Scanner teclado = new Scanner(System.in);
         
@@ -40,7 +38,7 @@ public class IO_ES {
         
     }
     
-    static public long leerIntegerLargo(){
+    static public long leerIntegerLargo()throws InputMismatchException{
         
         Scanner teclado = new Scanner(System.in);
         
@@ -51,7 +49,7 @@ public class IO_ES {
         
     }
     
-    static public double leerRealLargo(){
+    static public double leerRealLargo()throws InputMismatchException{
         
         Scanner teclado = new Scanner(System.in);
         

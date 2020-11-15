@@ -38,7 +38,7 @@ public class ABFACompruebaIO {
         
         //Declaración de variables
         
-        int opcion ;
+        int opcion = 0;
         Scanner teclado = new Scanner(System.in);
         
         // MENÚ
@@ -51,6 +51,9 @@ public class ABFACompruebaIO {
         
         
         do
+        {
+            
+        try
         {
             
         System.out.println("\nElige uno de los siguiente métodos.");
@@ -69,32 +72,76 @@ public class ABFACompruebaIO {
         switch (opcion) //menú
                 {
             case 1: //leerInteger - Int
-                
-                IO_ES.escribirLN("\nEl número introducido es: " + IO_ES.leerInteger());
+
+                try
+                {
+                    IO_ES.escribirLN("\nEl número introducido es: " + IO_ES.leerInteger());
+                }
+                catch(InputMismatchException e){
+                    System.err.println("¯\\_(ツ)_/¯ Has introducido una letra o un número no válido.");
+                    teclado.nextLine();
+                }
+                catch(Exception e){
+                    System.err.println("¯\\_(ツ)_/¯ Puede que hayas introducido una letra o un número no válido.");
+                    teclado.nextLine();
+                }
                 
                 break;
                 
             case 2: //leerReal - Float
 
-                IO_ES.escribirLN("\nEl número introducido es: " + IO_ES.leerReal());
+                try
+                {
+                    IO_ES.escribirLN("\nEl número introducido es: " + IO_ES.leerReal());
+                }
+                catch(InputMismatchException e){
+                    System.err.println("¯\\_(ツ)_/¯ Has introducido una letra o un número no válido.");
+                    teclado.nextLine();
+                }
+                catch(Exception e){
+                    System.err.println("¯\\_(ツ)_/¯ Puede que hayas introducido una letra o un número no válido.");
+                    teclado.nextLine();
+                }
                 
                 break;
                 
             case 3: //leerIntegerLargo - Long
                 
-                IO_ES.escribirLN("\nEl número introducido es: " + IO_ES.leerIntegerLargo());
+                try
+                {
+                    IO_ES.escribirLN("\nEl número introducido es: " + IO_ES.leerIntegerLargo());
+                }
+                catch(InputMismatchException e){
+                    System.err.println("¯\\_(ツ)_/¯ Has introducido una letra o un número no válido.");
+                    teclado.nextLine();
+                }
+                catch(Exception e){
+                    System.err.println("¯\\_(ツ)_/¯ Puede que hayas introducido una letra o un número no válido.");
+                    teclado.nextLine();
+                }
                 
                 break;
                 
             case 4: //leerRealLargo - Double
                 
-                IO_ES.escribirLN("\nEl número introducido es: " + IO_ES.leerRealLargo());
+                try
+                {
+                    IO_ES.escribirLN("\nEl número introducido es: " + IO_ES.leerRealLargo());
+                }
+                catch(InputMismatchException e){
+                    System.err.println("¯\\_(ツ)_/¯ Has introducido una letra o un número no válido.");
+                    teclado.nextLine();
+                }
+                catch(Exception e){
+                    System.err.println("¯\\_(ツ)_/¯ Puede que hayas introducido una letra o un número no válido.");
+                    teclado.nextLine();
+                }
                 
                 break;
                 
             case 5: // salir del programa
                 
-                IO_ES.escribir("¡Hasta luego, Manuela! \n");
+                IO_ES.escribir("\n¡Hasta luego, Manuela! \n");
                 
                 break;
                 
@@ -105,7 +152,15 @@ public class ABFACompruebaIO {
                 break;
                 
                 }
-        
+        }
+        catch(InputMismatchException e){
+                    System.err.println("(╯‵□′)╯︵┻━┻ ¿Se puede saber qué has instrucido? No es tan difícil, un número del 1 al 5.");
+                    teclado.nextLine();
+                }
+                catch(Exception e){
+                    System.err.println("¯\\_(ツ)_/¯ Puede que hayas introducido una letra o un número no válido.");
+                    teclado.nextLine();
+                }
         } while (opcion != 5);
         
     }
