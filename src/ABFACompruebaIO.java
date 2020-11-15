@@ -53,114 +53,115 @@ public class ABFACompruebaIO {
         do
         {
             
-        try
-        {
+            try
+            {
+
+            System.out.println("\nElige uno de los siguiente métodos.");
+            System.out.println("\n1 -- leerInteger()"
+                            + "\n2 -- leerReal()"
+                            + "\n3 -- leerIntegerLargo()"
+                            + "\n4 -- leerRealLargo()"
+                            + "\n5 -- Salir del programa.");
+
+            opcion = teclado.nextInt() ;
+
+
+            // ----------- Llamadas a métodos --------------
+
+
+            switch (opcion) //menú
+                    {
+                case 1: //leerInteger - Int
+
+                    try
+                    {
+                        IO_ES.escribirLN("\nEl número introducido es: " + IO_ES.leerInteger());
+                    }
+                    catch(InputMismatchException e){
+                        System.err.println("¯\\_(ツ)_/¯ Has introducido una letra o un número no válido.");
+                        teclado.nextLine();
+                    }
+                    catch(Exception e){
+                        System.err.println("¯\\_(ツ)_/¯ Puede que hayas introducido una letra o un número no válido.");
+                        teclado.nextLine();
+                    }
+
+                    break;
+
+                case 2: //leerReal - Float
+
+                    try
+                    {
+                        IO_ES.escribirLN("\nEl número introducido es: " + IO_ES.leerReal());
+                    }
+                    catch(InputMismatchException e){
+                        System.err.println("¯\\_(ツ)_/¯ Has introducido una letra o un número no válido.");
+                        teclado.nextLine();
+                    }
+                    catch(Exception e){
+                        System.err.println("¯\\_(ツ)_/¯ Puede que hayas introducido una letra o un número no válido.");
+                        teclado.nextLine();
+                    }
+
+                    break;
+
+                case 3: //leerIntegerLargo - Long
+
+                    try
+                    {
+                        IO_ES.escribirLN("\nEl número introducido es: " + IO_ES.leerIntegerLargo());
+                    }
+                    catch(InputMismatchException e){
+                        System.err.println("¯\\_(ツ)_/¯ Has introducido una letra o un número no válido.");
+                        teclado.nextLine();
+                    }
+                    catch(Exception e){
+                        System.err.println("¯\\_(ツ)_/¯ Puede que hayas introducido una letra o un número no válido.");
+                        teclado.nextLine();
+                    }
+
+                    break;
+
+                case 4: //leerRealLargo - Double
+
+                    try
+                    {
+                        IO_ES.escribirLN("\nEl número introducido es: " + IO_ES.leerRealLargo());
+                    }
+                    catch(InputMismatchException e){
+                        System.err.println("¯\\_(ツ)_/¯ Has introducido una letra o un número no válido.");
+                        teclado.nextLine();
+                    }
+                    catch(Exception e){
+                        System.err.println("¯\\_(ツ)_/¯ Puede que hayas introducido una letra o un número no válido.");
+                        teclado.nextLine();
+                    }
+
+                    break;
+
+                case 5: // salir del programa
+
+                    IO_ES.escribir("\n¡Hasta luego, Manuela! \n");
+
+                    break;
+
+                default: // Opción incorrecta
+
+                    IO_ES.escribir("\nIntroduce una opción válida, por favor. \n\n-----------------\n");
+
+                    break;
+
+                    }
+                }
+            catch(InputMismatchException e){
+                System.err.println("(╯‵□′)╯︵┻━┻ ¿Se puede saber qué has introducido? No es tan difícil, un número del 1 al 5.");
+                teclado.nextLine();
+            }
+            catch(Exception e){
+                System.err.println("¯\\_(ツ)_/¯ Puede que hayas introducido una letra o un número no válido.");
+                teclado.nextLine();
+            }
             
-        System.out.println("\nElige uno de los siguiente métodos.");
-        System.out.println("\n1 -- leerInteger()"
-                        + "\n2 -- leerReal()"
-                        + "\n3 -- leerIntegerLargo()"
-                        + "\n4 -- leerRealLargo()"
-                        + "\n5 -- Salir del programa.");
-        
-        opcion = teclado.nextInt() ;
-        
-        
-        // ----------- Llamadas a métodos --------------
-        
-        
-        switch (opcion) //menú
-                {
-            case 1: //leerInteger - Int
-
-                try
-                {
-                    IO_ES.escribirLN("\nEl número introducido es: " + IO_ES.leerInteger());
-                }
-                catch(InputMismatchException e){
-                    System.err.println("¯\\_(ツ)_/¯ Has introducido una letra o un número no válido.");
-                    teclado.nextLine();
-                }
-                catch(Exception e){
-                    System.err.println("¯\\_(ツ)_/¯ Puede que hayas introducido una letra o un número no válido.");
-                    teclado.nextLine();
-                }
-                
-                break;
-                
-            case 2: //leerReal - Float
-
-                try
-                {
-                    IO_ES.escribirLN("\nEl número introducido es: " + IO_ES.leerReal());
-                }
-                catch(InputMismatchException e){
-                    System.err.println("¯\\_(ツ)_/¯ Has introducido una letra o un número no válido.");
-                    teclado.nextLine();
-                }
-                catch(Exception e){
-                    System.err.println("¯\\_(ツ)_/¯ Puede que hayas introducido una letra o un número no válido.");
-                    teclado.nextLine();
-                }
-                
-                break;
-                
-            case 3: //leerIntegerLargo - Long
-                
-                try
-                {
-                    IO_ES.escribirLN("\nEl número introducido es: " + IO_ES.leerIntegerLargo());
-                }
-                catch(InputMismatchException e){
-                    System.err.println("¯\\_(ツ)_/¯ Has introducido una letra o un número no válido.");
-                    teclado.nextLine();
-                }
-                catch(Exception e){
-                    System.err.println("¯\\_(ツ)_/¯ Puede que hayas introducido una letra o un número no válido.");
-                    teclado.nextLine();
-                }
-                
-                break;
-                
-            case 4: //leerRealLargo - Double
-                
-                try
-                {
-                    IO_ES.escribirLN("\nEl número introducido es: " + IO_ES.leerRealLargo());
-                }
-                catch(InputMismatchException e){
-                    System.err.println("¯\\_(ツ)_/¯ Has introducido una letra o un número no válido.");
-                    teclado.nextLine();
-                }
-                catch(Exception e){
-                    System.err.println("¯\\_(ツ)_/¯ Puede que hayas introducido una letra o un número no válido.");
-                    teclado.nextLine();
-                }
-                
-                break;
-                
-            case 5: // salir del programa
-                
-                IO_ES.escribir("\n¡Hasta luego, Manuela! \n");
-                
-                break;
-                
-            default: // Opción incorrecta
-                
-                IO_ES.escribir("\nIntroduce una opción válida, por favor. \n\n-----------------\n");
-                
-                break;
-                
-                }
-        }
-        catch(InputMismatchException e){
-                    System.err.println("(╯‵□′)╯︵┻━┻ ¿Se puede saber qué has instrucido? No es tan difícil, un número del 1 al 5.");
-                    teclado.nextLine();
-                }
-                catch(Exception e){
-                    System.err.println("¯\\_(ツ)_/¯ Puede que hayas introducido una letra o un número no válido.");
-                    teclado.nextLine();
-                }
         } while (opcion != 5);
         
     }
