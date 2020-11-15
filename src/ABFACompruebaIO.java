@@ -33,6 +33,14 @@ public class ABFACompruebaIO {
             
             Aclaro esto para que no pase desapercibido, y si había alguna manera
             específica de hacerlo no he sido capaz de descifrarla.
+        
+            Las instrucciones Try/Catch las he metido en el main por una razón:
+            los métodos, al devolver valores y tener una instrucción return me
+            obligaba a darle un valor a la variable. Tal y como tengo hecho el
+            menú iba a mostrar un valor, si hay algún error se mostrará el valor
+            con el que inicié la variable, algo que quedaba muy feote. Tomé la 
+            decisión de hacerlo dentro del menú para que no ocurriera, sin embargo,
+            ahora hay que salir al menú cada vez que se inserta algún dato erróneo.
         */
         
         
