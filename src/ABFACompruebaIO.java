@@ -21,6 +21,21 @@ public class ABFACompruebaIO {
     public static void main(String[] args) {
         // TODO code application logic here
         
+        /* ------------------ NOTAS: 
+        
+            Ya que el enunciado no especifica el método exacto de
+            implementación, me he tomado la libertar de hacer un menú para la 
+            ocasión. Aquí quedan implementados los métodos que devuelven datos y
+            con ellos los métodos escribir() y escribirLN(). En primer momento
+            pensé indicarlo con un texto por pantalla y luego escribir la
+            invocación con algún mensaje de prueba, luego se me ocurrió esta forma
+            para que todo esté relacionado y los métodos interactúen entre sí.
+            
+            Aclaro esto para que no pase desapercibido, y si había alguna manera
+            específica de hacerlo no he sido capaz de descifrarla.
+        */
+        
+        
         //Declaración de variables
         
         int opcion ;
@@ -35,6 +50,9 @@ public class ABFACompruebaIO {
         System.out.println("----------------------------------------------");
         
         
+        do
+        {
+            
         System.out.println("\nElige uno de los siguiente métodos.");
         System.out.println("\n1 -- leerInteger()"
                         + "\n2 -- leerReal()"
@@ -44,7 +62,9 @@ public class ABFACompruebaIO {
         
         opcion = teclado.nextInt() ;
         
+        
         // ----------- Llamadas a métodos --------------
+        
         
         switch (opcion) //menú
                 {
@@ -72,13 +92,21 @@ public class ABFACompruebaIO {
                 
                 break;
                 
-            default: // salir del programa
+            case 5: // salir del programa
                 
-                IO_ES.escribir("¡Hasta luego, Manuela!");                
+                IO_ES.escribir("¡Hasta luego, Manuela! \n");
+                
+                break;
+                
+            default: // Opción incorrecta
+                
+                IO_ES.escribir("\nIntroduce una opción válida, por favor. \n\n-----------------\n");
                 
                 break;
                 
                 }
+        
+        } while (opcion != 5);
         
     }
     
