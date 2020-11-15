@@ -23,9 +23,11 @@ public class IO_ES {
         System.out.print("¡Hola! Introduce un número entero, por favor: ");
         int numero = teclado.nextInt();
         
-        return numero ;
+        return  numero;
         
     }
+    
+    
     
     static public float leerReal(){
         
